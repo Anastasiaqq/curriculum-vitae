@@ -1,6 +1,8 @@
 {
     "header": "Junior Frontend разработчик",
     "name": "Анастасия Березина",
+    "birthdate": "Дата рождения",
+    "Moscow": "Москва",
     "email": "email",
     "phone": "phone",
     "github": "Профиль на Github",
@@ -37,7 +39,7 @@
     "bachelor": "Бакалавр педагогического образования (биология и химия)",
     "master": "Магистр педагогического образования (методика преподавания химии)",
     "web": "Web-разработчик",
-    "Frontend": "Frontend-разработчик",
+    "frontend": "Frontend-разработчик",
     "skills": "Навыки",
     "programming": "Программирование",
     "soft": "Soft Skills",

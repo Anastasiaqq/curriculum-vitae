@@ -16,17 +16,23 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>{t("name")}</p>
-        <h1>{t("header")}</h1>
-        <button
-          onClick={(e) => i18n.changeLanguage(e.target.value)}
-          value={buttonValue}
-        >
-          {buttonText}
-        </button>
+        <div className="App-headercontainer">
+          <div>
+            <h1 className="header-name">{t("name")}</h1>
+            <p className="header-text">{t("header")}</p>
+          </div>
+
+          <button
+            className="header-button"
+            onClick={(e) => i18n.changeLanguage(e.target.value)}
+            value={buttonValue}
+          >
+            {buttonText}
+          </button>
+        </div>
       </header>
       <Info />
-      <footer>{t("footer")}</footer>
+      <footer className="footer">{t("footer")}</footer>
     </div>
   );
 }

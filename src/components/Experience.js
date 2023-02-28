@@ -41,7 +41,7 @@ const EXPERIENCE_ARRAY = [
   },
   {
     id: 4,
-    years: "12/2022",
+    years: "12/2022 - 12/2022",
     name: "terem",
     role: "intern",
     resps: [{ id: 0, v: "pixel" }],
@@ -53,10 +53,10 @@ function Experience() {
 
   let expTable = EXPERIENCE_ARRAY.map((exp) => (
     <tr key={exp.id}>
-      <td>{exp.years}</td>
-      <td>
-        <p>{t(exp.name) + "-" + t(exp.role)}</p>
-        <ul>
+      <td className="experience-td years">{exp.years}</td>
+      <td className="experience-td">
+        <p className="experience-place">{t(exp.name) + " - " + t(exp.role)}</p>
+        <ul className="experience-list">
           {exp.resps.map((r) => (
             <li key={r.id}>{t(r.v)}</li>
           ))}
@@ -65,9 +65,9 @@ function Experience() {
     </tr>
   ));
   return (
-    <section>
-      <h2>{t('experience')}</h2>
-      <table>
+    <section className="experience">
+      <h2 className="experience-header">{t('experience')}</h2>
+      <table className="experience-table">
         <tbody>{expTable}</tbody>
       </table>
     </section>

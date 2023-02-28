@@ -9,17 +9,17 @@ const SK = [
 function Skills() {
     const { t } = useTranslation()
     const SK_LIST = SK.map(s =>
-        <div>
-            <p>{t(s.name)}</p>
-            <ul>
-                {s.id !== 1 ? s.items.map(i => <li key={i[0]}>{t(i[0]) + ' - ' + t(i[1])}</li>) : s.items.map(i => <li>{t(i)}</li>)}
+        <div className="skills-list">
+            <p className="skills-groupname">{t(s.name)}</p>
+            <ul className="skills-group">
+                {s.id !== 1 ? s.items.map(i => <li className="skills-item" key={i[0]}>{t(i[0]) + ' - ' + t(i[1])}</li>) : s.items.map(i => <li>{t(i)}</li>)}
             </ul>
         </div>
     )
     return (
-        <section>
-            <h2>{t('skills')}</h2>
-            <div>{SK_LIST}</div>
+        <section className="skills">
+            <h2 className="skills-header">{t('skills')}</h2>
+            <div className="skills-total">{SK_LIST}</div>
         </section>
     )
 }
