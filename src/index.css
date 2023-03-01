@@ -1,8 +1,16 @@
 :root {
+  --color-text: #e2e1e1;
   --background-normal: #282c34;
   --background-accent: #363c47;
   --color-normal: #61dafb;
   --color-active: #6194fb;
+}
+:root.light {
+  --color-text: #241f1f;
+  --background-normal: #e2e1e1;
+  --background-accent: #cbcaca;
+  --color-normal: #6187fb;
+  --color-active: #3e4bc5
 }
 * {
   margin: 0;
@@ -15,7 +23,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #e2e1e1;
+  color: var(--color-text);
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -25,6 +33,7 @@ code {
   background-color: var(--background-normal);
   height: 100%;
   min-height: 100vh;
+  line-height: 1.5;
 }
 .App-header {
   display: flex;
@@ -41,17 +50,21 @@ code {
   width: 70%;
 }
 .header-name {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  line-height: 1;
 }
 .header-text {
-  margin-bottom: 5px;
   font-size: 24px;
   font-weight: 600;
 }
+.header-buttongroup {
+  margin-right: 30px;
+  width: 186px;
+}
 .header-button {
   box-sizing: border-box;
-  margin-right: 48px;
   padding: 5px 10px;
+  width: 186px;
   height: 34px;
   background: transparent;
   outline: none;
@@ -108,6 +121,7 @@ code {
   width: 70%;
 }
 .experience-header {
+  margin-bottom: 10px;
   text-align: center;
 }
 .experience-table tbody {
@@ -139,6 +153,7 @@ code {
   width: 70%;
 }
 .education-header {
+  margin-bottom: 10px;
   text-align: center;
 }
 .education-list {
@@ -165,6 +180,7 @@ code {
   width: 61%;
 }
 .skills-header {
+  margin-bottom: 10px;
   text-align: center;
 }
 .skills-total {
